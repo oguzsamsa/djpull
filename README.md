@@ -1,4 +1,4 @@
-**[⬇ Download the latest version](../../releases/latest)** · [Türkçe kurulum rehberi ↓](#türkçe)
+**[⬇ Download the latest version](https://github.com/oguzsamsa/djpull-surumler/releases/latest)** · [Türkçe kurulum rehberi ↓](#türkçe)
 
 # Installing djpull
 
@@ -10,7 +10,7 @@ Requirements: an Apple Silicon Mac (M1 or later), macOS 12 or newer.
 
 ## 1. Download and install
 
-1. Download `djpull_…_aarch64.dmg` from the [latest release](../../releases/latest) and open it.
+1. Download `djpull_…_aarch64.dmg` from the [latest release](https://github.com/oguzsamsa/djpull-surumler/releases/latest) and open it.
 2. Drag **djpull** into the **Applications** folder in the window that opens.
 
 ## 2. First launch (once)
@@ -107,7 +107,7 @@ Gerekenler: Apple Silicon (M1 ve sonrası) bir Mac, macOS 12 ya da yenisi.
 
 ### 1. İndir ve kur
 
-1. [Son sürümün sayfasından](../../releases/latest) `djpull_…_aarch64.dmg` dosyasını indir ve aç.
+1. [Son sürümün sayfasından](https://github.com/oguzsamsa/djpull-surumler/releases/latest) `djpull_…_aarch64.dmg` dosyasını indir ve aç.
 2. Açılan pencerede **djpull**'u **Applications** (Uygulamalar) klasörüne sürükle.
 
 ### 2. İlk açılış (sadece bir kez)
