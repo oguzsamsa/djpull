@@ -37,14 +37,11 @@ djpull does that work for you. Start a playlist, walk away, and come back to a f
 ## How it works
 
 ```mermaid
-flowchart LR
-  A["Playlist link<br/>or tracklist"] --> B["Clean up<br/>track names"]
-  B --> C["Already in<br/>your library?"]
-  C -- no --> D["Search<br/>Soulseek"]
-  D --> E["Pick the best source<br/>quality · wait · track record"]
-  E --> F["Download"]
-  F --> G["Check spectrum,<br/>name, tag"]
-  G --> H["Playlist folder<br/>+ .m3u8 for Rekordbox"]
+flowchart TD
+  A["Spotify / YouTube link or tracklist"] --> B["Clean up track names · skip what's already in your library"]
+  B --> C["Search Soulseek · pick the best source by quality, wait time and track record"]
+  C --> D["Download · check for fake lossless · name from tags"]
+  D --> E["Playlist folder + ordered .m3u8 for Rekordbox"]
 ```
 
 ## Install
