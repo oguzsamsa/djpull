@@ -6,11 +6,12 @@
 <p align="center">
   <a href="https://github.com/oguzsamsa/djpull/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/oguzsamsa/djpull?label=latest&color=EEA33B"></a>
   <img alt="macOS, Apple Silicon" src="https://img.shields.io/badge/macOS-Apple%20Silicon-211E1A">
+  <img alt="Windows 10/11, x64" src="https://img.shields.io/badge/Windows-10%20%2F%2011%20x64-211E1A">
   <img alt="Free" src="https://img.shields.io/badge/price-free-211E1A">
 </p>
 
 <p align="center">
-  <a href="https://github.com/oguzsamsa/djpull/releases/latest"><b>⬇ Download for macOS (Apple Silicon)</b></a>
+  <a href="https://github.com/oguzsamsa/djpull/releases/latest"><b>⬇ Download for macOS or Windows</b></a>
 </p>
 
 **djpull** turns a Spotify or YouTube playlist into a folder of lossless files, ready for Rekordbox. Paste a link, and it finds every track on Soulseek, picks the best source, downloads it, names it properly and hands you an ordered playlist file.
@@ -46,12 +47,16 @@ flowchart TD
 
 ## Install
 
-Requirements: a Mac with Apple Silicon (M1 or later), macOS 12 or newer, and a Soulseek account (djpull can create one for you).
+You need a Soulseek account; djpull can create one for you.
+
+### macOS
+
+Requirements: a Mac with Apple Silicon (M1 or later), macOS 12 or newer.
 
 1. Download `djpull_…_aarch64.dmg` from the [latest release](https://github.com/oguzsamsa/djpull/releases/latest) and open it.
 2. Drag **djpull** into **Applications**.
 
-### First launch
+#### First launch on macOS
 
 djpull is not signed by an Apple-registered developer yet, so macOS blocks it the first time:
 
@@ -65,15 +70,23 @@ You only do this once. If macOS says djpull "is damaged and can't be opened", do
 xattr -dr com.apple.quarantine /Applications/djpull.app
 ```
 
+### Windows
+
+Requirements: Windows 10 or 11, 64-bit (x64).
+
+1. Download `djpull_…_x64-setup.exe` from the [latest release](https://github.com/oguzsamsa/djpull/releases/latest) and run it. It installs for your user only; no administrator password needed.
+2. djpull is not signed with a paid certificate yet, so Windows may show **"Windows protected your PC"**. Click **More info → Run anyway**.
+3. On first launch, Windows Firewall may ask about **slskd** (djpull's Soulseek client). Click **Allow**; otherwise other users can't connect to you.
+
 ### Setup
 
 On first launch djpull walks you through three steps:
 
 1. **Soulseek account.** Sign in with your existing account, or make up a new username and password (there is no password recovery, so write them down). Don't use the same account in another Soulseek app while djpull is open; Soulseek allows one session per account.
-2. **Folders.** Downloads go to `Music/djpull`. Add your music library (for example your Rekordbox folder) so tracks you already have are skipped. The Desktop, Documents and Downloads folders can't be used, because macOS blocks them for background apps.
+2. **Folders.** Downloads go to `Music/djpull`. Add your music library (for example your Rekordbox folder) so tracks you already have are skipped. On macOS the Desktop, Documents and Downloads folders can't be used, because macOS blocks them for background apps.
 3. **Sharing.** Everyone on Soulseek shares, and many users won't upload to you if you share fewer than about 500 files. Others only see folder names, never paths on your Mac. Your Rekordbox database is never shared.
 
-When asked, allow **local network** access: djpull uses it to open the Soulseek port on your router.
+On macOS, when asked, allow **local network** access: djpull uses it to open the Soulseek port on your router.
 
 ## FAQ
 
@@ -85,9 +98,9 @@ When asked, allow **local network** access: djpull uses it to open the Soulseek 
 
 **Can I search myself?** Yes. Any track can be searched manually with your own words, and djpull learns spelling fixes you make for an artist.
 
-**How do I report a problem?** Open an [issue](https://github.com/oguzsamsa/djpull/issues) and attach `panel.log` and `slskd.log` from `~/Library/Application Support/djpull` (Finder → Go → Go to Folder). The version number is shown in djpull's connection box.
+**How do I report a problem?** Open an [issue](https://github.com/oguzsamsa/djpull/issues) and attach `panel.log` and `slskd.log` from djpull's data folder: `~/Library/Application Support/djpull` on macOS (Finder → Go → Go to Folder), `%APPDATA%\djpull` on Windows (paste it into the File Explorer address bar). The version number is shown in djpull's connection box.
 
-**Uninstall:** move djpull from Applications to the Trash. To remove settings too, delete `~/Library/Application Support/djpull`. Your music stays in `Music/djpull`.
+**Uninstall:** on macOS, move djpull from Applications to the Trash; on Windows, use *Settings → Apps → djpull → Uninstall*. To remove settings too, delete the data folder above. Your music stays in `Music/djpull`.
 
 ## Built with
 
@@ -97,4 +110,4 @@ djpull bundles unmodified releases of slskd 0.26.0 (AGPL-3.0, [source](https://g
 
 ## Platforms
 
-macOS on Apple Silicon today. A Windows version is in the works.
+macOS on Apple Silicon and Windows 10/11 (x64). On Windows, the fake-lossless check is not available yet; everything else works the same.
