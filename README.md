@@ -14,6 +14,10 @@
   <a href="https://github.com/oguzsamsa/djpull/releases/latest"><b>⬇ Download for macOS or Windows</b></a>
 </p>
 
+<p align="center">
+  <img alt="djpull showing a finished playlist: lossless badges, one MP3 being upgraded, one track still searching" src="assets/screenshot.png" width="900">
+</p>
+
 **djpull** turns a Spotify or YouTube playlist into a folder of lossless files, ready for Rekordbox. Paste a link, and it finds every track on Soulseek, picks the best source, downloads it, names it properly and hands you an ordered playlist file.
 
 ## Why
