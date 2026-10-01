@@ -102,9 +102,11 @@ On macOS, when asked, allow **local network** access: djpull uses it to open the
 
 **Can I search myself?** Yes. Any track can be searched manually with your own words, and djpull learns spelling fixes you make for an artist.
 
-**How do I report a problem?** Open an [issue](https://github.com/oguzsamsa/djpull/issues) and attach `panel.log` and `slskd.log` from djpull's data folder: `~/Library/Application Support/djpull` on macOS (Finder → Go → Go to Folder), `%APPDATA%\djpull` on Windows (paste it into the File Explorer address bar). The version number is shown in djpull's connection box.
+**How do I report a problem?** In djpull, click the bug icon at the top right (**Report a problem**). Describe what happened, add screenshots if they help, and press **Send**. The report goes straight to the developer together with djpull's logs. Passwords and keys are removed; Soulseek usernames and file names are included. You get a reference number to mention if you follow up.
 
-**Uninstall:** on macOS, move djpull from Applications to the Trash; on Windows, use *Settings → Apps → djpull → Uninstall*. To remove settings too, delete the data folder above. Your music stays in `Music/djpull`.
+If sending doesn't work, djpull saves the report as a `.zip` file and shows it in its folder. Open an [issue](https://github.com/oguzsamsa/djpull/issues) describing the problem, but don't attach the file there, because issues are public; we'll arrange a private way to get it to the developer.
+
+**Uninstall:** on macOS, move djpull from Applications to the Trash; on Windows, use *Settings → Apps → djpull → Uninstall*. To remove settings too, delete djpull's data folder: `~/Library/Application Support/djpull` on macOS, `%APPDATA%\djpull` on Windows. Your music stays in `Music/djpull`.
 
 ## Built with
 
