@@ -28,7 +28,8 @@ djpull does that work for you. Start a playlist, walk away, and come back to a f
 
 ## Features
 
-- **Paste anything.** Spotify playlists and albums, YouTube and YouTube Music playlists, or a plain "Artist - Title" tracklist (1001Tracklists, djooni…).
+- **Paste anything.** Spotify playlists and albums, YouTube and YouTube Music playlists, or a DJ set's tracklist page: 1001Tracklists, MixesDB, Resident Advisor podcasts, djooni, or a YouTube/SoundCloud set whose description lists the tracks. A plain "Artist - Title" list works too.
+- **Picks the right file.** The track title has to be in the file name, so a different track from the same EP folder is never taken.
 - **Lossless first.** FLAC, WAV, AIFF or ALAC whenever it exists. djpull estimates how long each source will actually take and waits for lossless when it is worth it; MP3 is the last resort.
 - **Knows the uploaders.** It keeps a track record of every user it downloads from. Users who never deliver are blacklisted automatically (including their look-alike accounts); reliable ones are trusted even with long queues. You can pin anyone yourself.
 - **Catches fake lossless.** Every downloaded FLAC/WAV gets a spectrum check. Files converted from MP3 are flagged, and djpull looks for a real one.
@@ -37,13 +38,13 @@ djpull does that work for you. Start a playlist, walk away, and come back to a f
 - **Skips what you have.** Point it at your music library, and tracks you already own are not downloaded again.
 - **Ready for Rekordbox.** Files are named `Artist - Title` from their own tags, one folder per playlist, with an ordered `.m3u8` next to them. In Rekordbox: *File → Import → Import Playlist*.
 - **Stuck downloads move on.** A download that doesn't start is moved to another source, never to a lower quality.
-- **Everything built in.** Soulseek client, sharing and messages included; no separate app needed. English and Turkish interface, automatic updates.
+- **Everything built in.** Soulseek client, sharing and messages included; no separate app needed. English, German and Turkish interface, automatic updates.
 
 ## How it works
 
 ```mermaid
 flowchart TD
-  A["Spotify / YouTube link or tracklist"] --> B["Clean up track names · skip what's already in your library"]
+  A["Spotify / YouTube playlist or set tracklist"] --> B["Clean up track names · skip what's already in your library"]
   B --> C["Search Soulseek · pick the best source by quality, wait time and track record"]
   C --> D["Download · check for fake lossless · name from tags"]
   D --> E["Playlist folder + ordered .m3u8 for Rekordbox"]
